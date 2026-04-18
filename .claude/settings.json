@@ -1,0 +1,15 @@
+{
+ "hooks": {
+  "SessionStart": [
+   {
+    "matcher": "startup",
+    "hooks": [
+     {
+      "type": "command",
+      "command": "echo '{\"systemMessage\": \"KEYBOARD-SITE WORKFLOW ENFORCEMENT:\\n• Referencia pixel-perfect: https://halotemplate.framer.website/ (NO HTML local)\\n• Scraping: Playwright MCP (mcp__plugin_playwright_playwright__*) — NO chrome-devtools\\n• Skill obligatorio: /pixel-perfect — 7 fases, ninguna se saltea\\n• Design system v2: ~/Documents/Matias boveda/design-system/\\n• Tokens: Inter Tight | bg #0a0a0a | cards #161616 solid | accent #fa8039\\n• Hero: Spline 3D embed (app.spline.design/community/file/1703d0dc-c298-4383-a95b-539ac857e8e2)\\n• NO glassmorphism en cards — solid dark | NO video scroll-sync\\n• DS v2 reqs: useReducedMotion() + hover guards + touch-manipulation + src/motion.js\"}'"
+     }
+    ]
+   }
+  ]
+ }
+}

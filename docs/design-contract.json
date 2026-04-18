@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "generated": "2026-04-16",
+    "agent": "Agent 1 — Design Research",
+    "project": "keyboard-site",
+    "refs_scraped": ["bima.framer.media", "motionsites.ai", "voidai.framer.website", "landeros.framer.website"]
+  },
+
+  "bima": {
+    "url": "https://bima.framer.media/",
+    "color_scheme": "dark",
+    "background": "#000319",
+    "text_primary": "#FFFFFF",
+    "accent": "#898999",
+    "secondary": "#26293C",
+    "typography": {
+      "heading_family": "Plus Jakarta Sans",
+      "body_family": "Plus Jakarta Sans",
+      "h1_size": "72px",
+      "h2_size": "80px",
+      "body_size": "18px",
+      "font_weight_heading": "700",
+      "source": "Google Fonts"
+    },
+    "spacing": {
+      "base_unit": 4,
+      "border_radius": "0px"
+    },
+    "glass": {
+      "detected": true,
+      "note": "Backdrop-filter present in HTML (grep confirmed), likely on navbar/cards. Values not extractable from SSR — estimated from dark Framer nav pattern.",
+      "estimated_backdrop_filter": "blur(12px) saturate(150%)",
+      "estimated_background": "rgba(0, 3, 25, 0.75)",
+      "estimated_border": "1px solid rgba(255, 255, 255, 0.08)"
+    },
+    "animation_stack": {
+      "framer": true,
+      "gsap": false,
+      "lenis": false,
+      "spline": false,
+      "three": false
+    },
+    "spline": {
+      "urls_found": [],
+      "viewer_elements": []
+    },
+    "sections_detected": [
+      "hero",
+      "pain-points (Is This You?)",
+      "solutions (AI-Powered Workflow)",
+      "case-studies (See Our Work in Action)",
+      "why-us (Why Top Brands Trust Us)",
+      "tech-stack",
+      "testimonials",
+      "pricing",
+      "team",
+      "faq",
+      "blog",
+      "contact"
+    ],
+    "notable_patterns": [
+      "Full-bleed dark hero with large heading split across two lines",
+      "Scrolling testimonial ticker below hero CTA",
+      "Problem section with icon cards",
+      "Case studies with numbered list and category tags",
+      "Animated counter in pricing (rolling digit animation)",
+      "Pricing toggle Monthly/Yearly with -15% badge",
+      "Clean footer with template purchase CTA"
+    ]
+  },
+
+  "voidai": {
+    "url": "https://voidai.framer.website/",
+    "color_scheme": "dark",
+    "background": "#01010D",
+    "text_primary": "#F0F0FF",
+    "accent": "#0000EE",
+    "secondary": null,
+    "typography": {
+      "heading_family": "JetBrains Mono",
+      "body_family": "IBM Plex Sans",
+      "auxiliary_family": "Inter",
+      "h1_size": "166px",
+      "h2_size": "44px",
+      "body_size": "16px",
+      "font_weight_heading": "700",
+      "note": "Heading rendered in JetBrains Mono for monospace/tech aesthetic, body in IBM Plex Sans"
+    },
+    "spacing": {
+      "base_unit": 4,
+      "border_radius": "0px"
+    },
+    "glass": {
+      "detected": true,
+      "note": "Backdrop-filter confirmed in HTML. Framer nav pattern with very dark near-black base.",
+      "estimated_backdrop_filter": "blur(20px) saturate(180%)",
+      "estimated_background": "rgba(1, 1, 13, 0.80)",
+      "estimated_border": "1px solid rgba(255, 255, 255, 0.06)"
+    },
+    "button_shadow": "rgba(255, 255, 255, 0.25) 0px 2px 4px 0px",
+    "animation_stack": {
+      "framer": true,
+      "gsap": false,
+      "lenis": false,
+      "spline": false,
+      "three": false
+    },
+    "spline": {
+      "urls_found": [],
+      "viewer_elements": []
+    },
+    "sections_detected": [
+      "hero (massive 166px VOIDAI logotype)",
+      "who-we-are (editorial quote layout)",
+      "services (4 service cards with animated gif previews)",
+      "features (hands-free, scalable, faster, smarter, integrations)",
+      "process (3 steps: Discovery, Implementation, Optimization)",
+      "projects / case studies",
+      "achievements (large number stats: 120+ projects, $8.5M revenue)",
+      "campaigns (carousel with project cards)",
+      "comparison table (us vs others)",
+      "testimonials (dual column + twitter-style reviews)",
+      "faq",
+      "footer with template promo"
+    ],
+    "notable_patterns": [
+      "Giant display typography (166px) as brand statement in hero",
+      "Animated text cycling (Automate away the... [rotating text])",
+      "Editorial 'who we are' section with blockquote styling",
+      "GIF-based feature previews on service cards",
+      "Horizontal scrolling campaign carousel",
+      "Comparison table with checkmarks vs competitors",
+      "Twitter-style review cards in testimonials",
+      "VoidAI links to Landeros as 'Our Latest Free Template' — same creator"
+    ]
+  },
+
+  "landeros": {
+    "url": "https://landeros.framer.website/",
+    "color_scheme": "light",
+    "background": "#FFFFFF",
+    "text_primary": "#1C1629",
+    "accent": "#311081",
+    "secondary": null,
+    "typography": {
+      "heading_family": "Satoshi",
+      "body_family": "Inter",
+      "auxiliary_family": "Manrope",
+      "h1_size": "86px",
+      "h2_size": "44px",
+      "body_size": "14px",
+      "font_weight_heading": "700",
+      "note": "Satoshi for headings (premium rounded sans), Inter for body — clean pairing"
+    },
+    "spacing": {
+      "base_unit": 4,
+      "border_radius": "15px"
+    },
+    "glass": {
+      "detected": false,
+      "note": "Light theme — no backdrop-filter glass detected. Uses layered shadows instead.",
+      "button_shadow": "rgb(255, 255, 255) 0px 0px 1px 1px, rgba(0, 0, 0, 0.25) 0px 2px 4px 0px, rgba(0, 0, 0, 0.4) 0px 0px 0px 1px"
+    },
+    "animation_stack": {
+      "framer": true,
+      "gsap": false,
+      "lenis": false,
+      "spline": false,
+      "three": false
+    },
+    "spline": {
+      "urls_found": [],
+      "viewer_elements": [],
+      "search_result": "NO Spline URLs found — searched for prod.spline.design, .splinecode, spline-viewer in full HTML"
+    },
+    "sections_detected": [
+      "hero",
+      "features / solutions",
+      "how-it-works",
+      "social-proof",
+      "pricing",
+      "testimonials",
+      "faq",
+      "cta",
+      "footer"
+    ],
+    "notable_patterns": [
+      "Light/white theme — contrasts with most dark refs",
+      "Rounded button style (100px border-radius = pill shape)",
+      "3-layer box shadow on buttons for depth",
+      "Satoshi font creates premium but approachable feel",
+      "Creator also made VoidAI (confirmed cross-link)"
+    ]
+  },
+
+  "motionsites": {
+    "url": "https://motionsites.ai/?prompt=bloom-ai-hero",
+    "color_scheme": "dark",
+    "background": "#171717",
+    "text_primary": "#171717",
+    "accent": "#193A25",
+    "secondary": "#18281E",
+    "note": "MotionSites is a hero-prompt generator app, not a landing page template. Extracted tokens reflect the app UI, not the generated 'bloom-ai-hero' output. App uses system font stack.",
+    "typography": {
+      "heading_family": "system-ui (-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial)",
+      "body_family": "system-ui",
+      "h1_size": "56px",
+      "h2_size": "36px",
+      "body_size": "16px",
+      "note": "Uses system fonts — not relevant for keyboard-site which requires Google Fonts"
+    },
+    "spacing": {
+      "base_unit": 4,
+      "border_radius": "12px"
+    },
+    "glass": {
+      "detected": false,
+      "note": "No backdrop-filter found in HTML scrape"
+    },
+    "animation_stack": {
+      "framer": false,
+      "gsap": false,
+      "lenis": false,
+      "spline": false,
+      "three": false
+    },
+    "spline": {
+      "urls_found": [],
+      "viewer_elements": []
+    },
+    "sections_detected": [
+      "hero prompt input",
+      "prompt gallery / cards",
+      "preview area",
+      "navigation"
+    ],
+    "notable_patterns": [
+      "Dark UI (#171717) with green accent (#193A25) — forest/nature dark palette",
+      "Radius 12px — consistent rounded corners throughout",
+      "App-style layout, not landing page — treat as UI inspiration only",
+      "Green dark accent is unique in the ref set — useful as alternative to orange if keyboard project needs variation"
+    ]
+  },
+
+  "synthesis": {
+    "spline_url": null,
+    "spline_search_verdict": "No Spline URLs found in any of the 4 references. Searched full HTML of bima, voidai, landeros for prod.spline.design, .splinecode, and spline-viewer elements. All returned zero matches. Landeros specifically had NO Spline whatsoever.",
+    "spline_fallback": "r3f_keyboard_canvas",
+
+    "animation_tool": "framer-motion",
+    "animation_notes": "All Framer-built refs use Framer Motion internally. For the React 19 + Vite stack, Framer Motion is the correct equivalent. No GSAP, Three.js, or Lenis detected across any ref.",
+
+    "glass_css_recommended": {
+      "source_ref": "voidai (most aggressive blur detected, pure dark bg)",
+      "backdrop_filter": "blur(20px) saturate(180%)",
+      "background": "rgba(0, 0, 0, 0.60)",
+      "box_shadow": "0 1px 0 0 rgba(255,255,255,0.08) inset, 0 24px 64px -12px rgba(0,0,0,0.5)",
+      "border": "1px solid rgba(255, 255, 255, 0.08)",
+      "notes": "For keyboard-site dark theme (#000000 base), use this glass on: navbar, floating cards, spec overlay. The inner top border (box-shadow inset) simulates light catching the glass edge — pattern from premium dark UI."
+    },
+
+    "button_shadow_recommended": {
+      "source_ref": "voidai primary button",
+      "box_shadow": "rgba(255, 255, 255, 0.15) 0px 1px 2px 0px, rgba(250, 128, 57, 0.25) 0px 0px 0px 1px",
+      "notes": "Adapted for keyboard-site orange accent. Inner white shimmer + colored outer ring = premium CTA feel."
+    },
+
+    "accent_color": "#fa8039",
+    "accent_notes": "Existing keyboard-site token. None of the refs use orange — this differentiates the keyboard project. Keep it.",
+
+    "recommended_fonts": [
+      {
+        "family": "Plus Jakarta Sans",
+        "role": "heading alternative",
+        "source": "bima",
+        "google_fonts_url": "https://fonts.google.com/specimen/Plus+Jakarta+Sans",
+        "notes": "Clean geometric sans. Good for tech/product headings."
+      },
+      {
+        "family": "IBM Plex Sans",
+        "role": "body alternative",
+        "source": "voidai",
+        "google_fonts_url": "https://fonts.google.com/specimen/IBM+Plex+Sans",
+        "notes": "Technical but warm. Pairs well with JetBrains Mono."
+      },
+      {
+        "family": "JetBrains Mono",
+        "role": "monospace / spec labels",
+        "source": "voidai",
+        "google_fonts_url": "https://fonts.google.com/specimen/JetBrains+Mono",
+        "notes": "Ideal for keyboard specs: keycap legends, switch specs, actuation force values. Adds authenticity."
+      },
+      {
+        "family": "Satoshi",
+        "role": "heading premium alternative",
+        "source": "landeros",
+        "google_fonts_url": "https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap",
+        "source_type": "fontshare (not Google Fonts)",
+        "notes": "Premium rounded sans. Very distinct from Inter. Strong brand differentiation for headings."
+      }
+    ],
+
+    "typography_recommendation": {
+      "heading": "Inter (existing) OR Satoshi (upgrade path)",
+      "body": "Inter (keep — already in project)",
+      "mono_accent": "JetBrains Mono (add for spec labels, keycap text, technical details)",
+      "h1_size_range": "72px–86px desktop, 48px tablet, 36px mobile",
+      "tracking_heading": "-0.03em to -0.04em",
+      "line_height_body": "1.6"
+    },
+
+    "key_sections_detected": [
+      "hero — full-bleed dark with large display type + single CTA",
+      "social-proof-ticker — scrolling logos/testimonials below hero",
+      "pain-points — 2-4 problem statements with icons",
+      "solutions/features — card grid with service descriptions",
+      "how-it-works — numbered step process (3 steps)",
+      "case-studies — portfolio with numbered items + category tags",
+      "stats-bar — large number callouts (projects, clients, revenue)",
+      "testimonials — quote cards or twitter-style reviews",
+      "pricing — tiered cards with toggle monthly/yearly",
+      "faq — accordion",
+      "contact/cta — full-width dark CTA section",
+      "footer"
+    ],
+
+    "keyboard_site_specific_sections": [
+      "hero — keyboard 3D/R3F canvas + headline + pre-order CTA",
+      "product-specs — JetBrains Mono labels, actuation force, switch type",
+      "features — card grid (hot-swap, aluminum, gasket mount, etc.)",
+      "gallery — full-bleed product photography",
+      "colorways — interactive color selector",
+      "social-proof — community / early access testimonials",
+      "pre-order — pricing section with availability",
+      "faq",
+      "footer"
+    ],
+
+    "dark_palette_reference": {
+      "bg_primary": "#000000",
+      "bg_surface": "#0A0A0A",
+      "bg_elevated": "#111111",
+      "border_subtle": "rgba(255, 255, 255, 0.06)",
+      "border_default": "rgba(255, 255, 255, 0.10)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255, 255, 255, 0.60)",
+      "text_tertiary": "rgba(255, 255, 255, 0.35)",
+      "accent": "#fa8039",
+      "accent_glow": "rgba(250, 128, 57, 0.20)",
+      "notes": "Synthesized from bima (#000319) and voidai (#01010D) dark patterns. Pure black is more premium for hardware product."
+    },
+
+    "motion_tokens": {
+      "duration_fast": "0.15s",
+      "duration_default": "0.3s",
+      "duration_slow": "0.6s",
+      "ease_default": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "ease_out_expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+      "stagger_children": "0.06s",
+      "notes": "Emil Kowalski easing pattern — fast out, smooth deceleration. Use for all entrance animations."
+    },
+
+    "screenshot_urls": {
+      "bima_desktop": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-bc388675-c8e3-4a26-a6dd-b68eb5506791.png",
+      "voidai_desktop": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-2c161284-b8fb-4bad-90cf-ae049a26a7a7.png",
+      "landeros_desktop": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-a32baeda-7bcd-4f6c-b0e5-775bb3e7dfc5.png",
+      "motionsites_desktop": "https://storage.googleapis.com/firecrawl-scrape-media/screenshot-464cc5e1-3b0d-47aa-8906-54565da2dcfc.png"
+    }
+  }
+}

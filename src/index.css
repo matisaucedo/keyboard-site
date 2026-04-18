@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TOKENS
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* Color — VoidAI-adapted palette (Insights Hardware) */
+  --color-bg:       #01010D;
+  --color-surface:  #0D0D1A;
+  --color-surface2: #12121F;
+  --color-txt:      #F0F0FF;
+  --color-muted:    rgba(240,240,255,0.45);
+  --color-muted2:   rgba(240,240,255,0.30);
+  --color-accent:   #fa8039;
+  --accent-rgb:     250,128,57;
+  --label-color:    rgba(240,240,255,0.35);
+
+  /* Spacing responsive */
+  --gap-card:    24px;
+  --gap-section: 96px;
+
+  /* Easing curves (Emil Kowalski / interaction-design) */
+  --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in:     cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Shadow elevation (design-system v2) */
+  --shadow-base:     none;
+  --shadow-elevated: 0 1px 2px rgba(15,15,14,0.06), 0 4px 12px rgba(15,15,14,0.08);
+  --shadow-floating: 0 2px 4px rgba(15,15,14,0.08), 0 12px 24px rgba(15,15,14,0.10), 0 0 0 1px rgba(15,15,14,0.04);
+  --shadow-overlay:  0 4px 8px rgba(15,15,14,0.12), 0 20px 40px rgba(15,15,14,0.18);
+
+  /* Glass — PROYECTO: ajustar según fondo claro/oscuro */
+  --glass-blur:     20px;
+  --glass-saturate: 1.6;
+  --glass-bg:       rgba(255,255,255,0.06);
+  --glass-border:   rgba(255,255,255,0.07);
+}
+
+@media (max-width: 809px) {
+  :root {
+    --gap-card:    16px;
+    --gap-section: 64px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DARK MODE
+   ═══════════════════════════════════════════════════════════════════════════ */
+/* PROYECTO: descomentar y completar si el proyecto usa dual light/dark
+html.dark {
+  --color-bg:       ;
+  --color-surface:  ;
+  --color-surface2: ;
+  --color-txt:      ;
+  --color-muted:    ;
+  --color-muted2:   ;
+  --color-accent:   ;
+}
+*/
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESET
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-optical-sizing: auto;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-txt);
+    font-family: "Switzer", "Inter", system-ui, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  img, video, svg {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TIPOGRAFÍA
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  .t-h1 {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--color-txt);
+  }
+  .t-h2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: var(--color-txt);
+  }
+  .t-h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-txt);
+  }
+  .t-lg {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: -0.02em;
+    color: var(--color-txt);
+  }
+  .t-body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65em;
+    letter-spacing: 0;
+    color: var(--color-muted);
+  }
+  .t-sm {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: 0;
+    color: var(--color-muted);
+  }
+  .t-xs {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.3em;
+    letter-spacing: 0.01em;
+    color: var(--color-muted2);
+  }
+  .t-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted2);
+  }
+
+  /* Headings use Inter Tight */
+  .t-h1, .t-h2, .t-h3 {
+    font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+  }
+
+  @media (max-width: 1199px) {
+    .t-h1 { font-size: 56px; }
+    .t-h2 { font-size: 36px; }
+  }
+  @media (max-width: 809px) {
+    .t-h1 { font-size: 40px; letter-spacing: -0.03em; }
+    .t-h2 { font-size: 28px; letter-spacing: -0.02em; }
+    .t-h3 { font-size: 22px; }
+    .t-lg  { font-size: 18px; }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLASS SURFACE
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  .surface-glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+
+  /* Para fondos claros — PROYECTO: ajustar según contexto */
+  .surface-glass-light {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SHADOWS
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  .shadow          { box-shadow: var(--shadow-base); }
+  .shadow-elevated { box-shadow: var(--shadow-elevated); }
+  .shadow-floating { box-shadow: var(--shadow-floating); }
+  .shadow-overlay  { box-shadow: var(--shadow-overlay); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE SAFETY
+   ═══════════════════════════════════════════════════════════════════════════ */
+/* Requiere <meta viewport content="... viewport-fit=cover"> */
+@layer utilities {
+  .safe-top    { padding-top:    env(safe-area-inset-top); }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+  .safe-x      { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+  .safe-y      { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+  .touch-target { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LENIS
+   ═══════════════════════════════════════════════════════════════════════════ */
+.lenis                              { height: auto; }
+.lenis.lenis-smooth                 { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped                { overflow: hidden; }
+.lenis.lenis-scrolling iframe       { pointer-events: none; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  .gpu-layer {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+
+  .no-select {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-muted2) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar       { width: 4px; height: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: var(--color-muted2); border-radius: 2px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BLOB ANIMATION
+   ═══════════════════════════════════════════════════════════════════════════ */
+@keyframes blob {
+  0%   { transform: translate(0, 0) scale(1) translateZ(0); }
+  33%  { transform: translate(30px, -50px) scale(1.1) translateZ(0); }
+  66%  { transform: translate(-20px, 20px) scale(0.9) translateZ(0); }
+  100% { transform: translate(0, 0) scale(1) translateZ(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLASS SYSTEM — Agent 2
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --glass-blur-2: 20px;
+  --glass-saturate-2: 180%;
+  --glass-bg-2: rgba(1, 1, 13, 0.72);
+  --glass-border-2: rgba(240, 240, 255, 0.06);
+  --glass-shadow-2: 0 1px 0 0 rgba(255,255,255,0.08) inset, 0 24px 64px -12px rgba(0,0,0,0.5);
+  --glass-border-subtle: rgba(240, 240, 255, 0.05);
+  --bg-surface: #0D0D1A;
+  --bg-elevated: #0D0D20;
+  --text-secondary: rgba(240, 240, 255, 0.55);
+  --text-tertiary: rgba(240, 240, 255, 0.30);
+  --accent-glow: rgba(250, 128, 57, 0.20);
+
+  /* Liquid Glass v3 — iOS 26 style */
+  --glass-v3-bg:       rgba(255,255,255,0.03);
+  --glass-v3-border:   rgba(255,255,255,0.06);
+  --glass-v3-blur:     24px;
+  --glass-v3-shadow:   inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(0,0,0,0.4);
+}
+
+@layer utilities {
+  .surface-glass-2 {
+    backdrop-filter: blur(var(--glass-blur-2)) saturate(var(--glass-saturate-2));
+    -webkit-backdrop-filter: blur(var(--glass-blur-2)) saturate(var(--glass-saturate-2));
+    background: var(--glass-bg-2);
+    box-shadow: var(--glass-shadow-2);
+    border: 1px solid var(--glass-border-2);
+  }
+
+  .surface-glass-subtle {
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border-subtle);
+  }
+
+  .font-mono-spec {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .surface-liquid-glass {
+    background: var(--glass-v3-bg);
+    backdrop-filter: blur(var(--glass-v3-blur)) saturate(160%);
+    -webkit-backdrop-filter: blur(var(--glass-v3-blur)) saturate(160%);
+    border: 1px solid var(--glass-v3-border);
+    box-shadow: var(--glass-v3-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  .surface-liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(240,240,255,0.06) 0%, transparent 32%);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+/* Focus ring — sistema coherente con Minta dark */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reduced motion — a11y obligatorio */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   VOIDAI AESTHETIC — ambient glow + gradient headings
+   ═══════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  .section-ambient-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(250,128,57,0.07) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .heading-gradient {
+    background: linear-gradient(180deg, #F0F0FF 0%, rgba(250,128,57,0.85) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
